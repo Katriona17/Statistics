@@ -44,7 +44,7 @@ public class StatsService {
     }
 
     public int calculateUnderAverage(long[] sales) {
-        int average = (int) calculateAverageSum(sales);
+        long average = calculateAverageSum(sales);
         int month = 0;
         for (long sale : sales)
             if (sale < average) {
@@ -54,7 +54,7 @@ public class StatsService {
     }
 
     public int calculateOverAverage(long[] sales) {
-        int average = (int) calculateAverageSum(sales);
+        long average = calculateAverageSum(sales);
         int month = 0;
         for (long sale : sales)
             if (sale > average) {
